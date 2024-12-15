@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Виртуальды зертхана</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Информатика пәнінен виртуальды зертхана</h1>
+    <nav>
+      <ul>
+        <li><a href="#compiler">1. Онлайн компилятор</a></li>
+        <li><a href="#neural-network">2. Қарапайым нейрон желісі</a></li>
+        <li><a href="#cipher">3. Шифрлау және дешифрлау</a></li>
+        <li><a href="#processor">4. Процессор жинау</a></li>
+        <li><a href="#os">5. Операциялық жүйені орнату</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Онлайн компилятор бөлімі -->
+  <section id="compiler">
+    <h2>Онлайн компилятор</h2>
+    <textarea id="codeInput" placeholder="JavaScript кодын мұнда жазыңыз..." rows="10" cols="50"></textarea><br>
+    <button onclick="runCode()">Кодты орындау</button>
+    <h3>Нәтиже:</h3>
+    <pre id="output"></pre>
+  </section>
+
+  <!-- Қарапайым нейрон желісін жасау бөлімі -->
+  <section id="neural-network">
+    <h2>Қарапайым нейрон желісін жасау</h2>
+    <button onclick="trainNeuralNetwork()">Нейрон желісін жаттықтыру</button>
+    <h3>Нәтиже:</h3>
+    <pre id="neuralOutput"></pre>
+  </section>
+
+  <!-- Шифрлау және дешифрлау бөлімі -->
+  <section id="cipher">
+    <h2>Шифрлау және дешифрлау</h2>
+    <textarea id="textInput" placeholder="Мәтін жазыңыз..." rows="4" cols="50"></textarea><br>
+    <button onclick="encryptText()">Шифрлау</button>
+    <button onclick="decryptText()">Дешифрлау</button>
+    <h3>Нәтиже:</h3>
+    <pre id="cipherOutput"></pre>
+  </section>
+
+  <!-- Процессор жинау бөлімі -->
+  <section id="processor">
+    <h2>Процессор жинау</h2>
+    <p>Процессор жинау үшін келесі сілтемеге өтіңіз:</p>
+    <a href="https://www.computerhope.com/jargon/c/cpu-builder.htm" target="_blank">Процессор жинау құралын ашу</a>
+  </section>
+
+  <!-- Операциялық жүйені орнату бөлімі -->
+  <section id="os">
+    <h2>Операциялық жүйені орнату</h2>
+    <p>Операциялық жүйені орнату үшін келесі сілтемеге өтіңіз:</p>
+    <a href="https://www.virtualbox.org/" target="_blank">VirtualBox ресми сайты</a>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
