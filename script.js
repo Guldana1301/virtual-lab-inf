@@ -35,4 +35,6 @@ function decryptText() {
   var encryptedText = document.getElementById("cipherOutput").textContent.split(': ')[1];
   var bytes = CryptoJS.AES.decrypt(encryptedText, 'secret key');
   var decrypted = bytes.toString(CryptoJS.enc.Utf8);
-  document.getElementById("cipherOutput").textContent = `Дешифрланған мәтін
+  document.getElementById("cipherOutput").textContent = `Дешифрланған мәтін: ${decrypted}`;
+}
+
