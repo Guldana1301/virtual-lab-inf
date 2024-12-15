@@ -37,15 +37,52 @@
     <pre id="neuralOutput"></pre>
   </section>
 
-  <!-- Шифрлау және дешифрлау бөлімі -->
-  <section id="cipher">
-    <h2>Шифрлау және дешифрлау</h2>
-    <textarea id="textInput" placeholder="Мәтін жазыңыз..." rows="4" cols="50"></textarea><br>
-    <button onclick="encryptText()">Шифрлау</button>
-    <button onclick="decryptText()">Дешифрлау</button>
-    <h3>Нәтиже:</h3>
-    <pre id="cipherOutput"></pre>
-  </section>
+<!-- Шифрлау және дешифрлау бөлімі -->
+<section id="cipher">
+  <h2>Атбаш шифры</h2>
+  <textarea id="textInput" placeholder="Мәтін жазыңыз..." rows="4" cols="50"></textarea><br>
+  <button onclick="encryptText()">Шифрлау</button>
+  <button onclick="decryptText()">Дешифрлау</button>
+  <h3>Нәтиже:</h3>
+  <pre id="cipherOutput"></pre>
+</section>
+
+<script>
+  function encryptText() {
+    let text = document.getElementById('textInput').value;
+    let result = atbashCipher(text);
+    document.getElementById('cipherOutput').textContent = result;
+  }
+
+  function decryptText() {
+    let text = document.getElementById('textInput').value;
+    let result = atbashCipher(text);
+    document.getElementById('cipherOutput').textContent = result;
+  }
+
+  function atbashCipher(text) {
+    const alphabet = 'abcdefghijklmnopqrstuvwxyz';
+    const reverseAlphabet = alphabet.split('').reverse().join('');
+    const table = {};
+
+    for (let i = 0; i < alphabet.length; i++) {
+      table[alphabet[i]] = reverseAlphabet[i];
+      table[alphabet[i].toUpperCase()] = reverseAlphabet[i].toUpperCase();
+    }
+
+    let result = '';
+    for (let char of text) {
+      if (table[char]) {
+        result += table[char];
+      } else {
+        result += char;
+      }
+    }
+
+    return result;
+  }
+</script>
+
 
   <!-- Процессор жинау бөлімі -->
   <section id="processor">
